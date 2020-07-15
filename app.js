@@ -10,7 +10,12 @@ for (i = 0; i < cars.length; i++) {
 
 var sizeOfCanvas = 4;
 var text = "";
-for (var i = 0; i < sizeOfCanvas; i++) {
-	text += "<div class='pixel'></div>"
+for (var row = 0; row < 4; row++) {
+	text+="<div class='row'>";
+	//text="";
+	for (var cell = 0; cell < sizeOfCanvas; cell++){
+		text += "<div class='pixel'></div>"
+	}
+	text+="</div>";
 }
 document.getElementById("demo").innerHTML = text;
