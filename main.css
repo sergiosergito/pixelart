@@ -1,43 +1,32 @@
-.list {
-  list-style: square;
-}
-
-#date {
-  font-size: 12px;
-  font-style: italic;
-  font-weight: bold;
-}
-
-body {
-  font-family: helvetica;
+.canvas {
+  width: 740px;
+  height: 320px;
   background: #333;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
 }
 
-li {
-  list-style: circle;
-}
-
-table {
-  width: 80px;
-  height: 80px;
-}
-
-td {
+div.pixel {
+  /* We'll need 64 total pixels in our HTML */
+  width: 10px;
+  height: 10px;
+  float: left;
   box-shadow: 0px 0px 1px 0px #eaeaea;
-  width: 10%;
-  height: 10%;
-}
-
-ul {
-  font-family: monospace;
 }
 
 
+canvas row div.pixel2 {
+  background: yellow;
+}
 
+/*
+div.pixel:nth-child(1) {
+  background: orange;
+}
+*/
+/*
+div.pixel:nth-child(2) {
+  background: yellow;
+}
+*/
 
 
 
