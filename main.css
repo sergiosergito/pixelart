@@ -1,27 +1,18 @@
 :root {
-  --CELL-SIZE: 10px;  
+  --CELL_SIZE: 10px;
+  --CANVAS_SIZE: 40px;
 }
 
-/*
-.canvas {
-  width: 82px;
-  height: 60px;
-  background: #333;
-}
-*/
-
-div.pixel {
-  /* We'll need 64 total pixels in our HTML */
-  width: var(--CELL-SIZE);
-  height: var(--CELL-SIZE);
+.pixel {
+  width: var(--CELL_SIZE);
+  height: var(--CELL_SIZE);
   float: left;
   box-shadow: 0px 0px 1px 0px #eaeaea;
 }
 
 .row {
-  width: 80px;
-  height: 10px;
+  width: var(--CANVAS_SIZE);
+  height: var(--CELL_SIZE);
   background: #333;
 }
-
 
