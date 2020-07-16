@@ -1,5 +1,5 @@
 function changeColor(cellID){
-	if (document.getElementById(cellID).style.background != "green") {
+	if (!isGreen(cellID)) {
 		document.getElementById(cellID).style.background = "green";	
 	}
 	else{
@@ -49,7 +49,7 @@ function generateInoGrid(){
 	var cellID=1;
 	var text = "{";
 	for (var row = 0; row < sizeOfCanvas*sizeOfCanvas; row++) {
-		if (document.getElementById(cellID).style.background == "green") {
+		if (isGreen(cellID)) {
 			text +="1";
 		}
 		else{
@@ -59,6 +59,12 @@ function generateInoGrid(){
 	}
 	text +="}";
 	printInConsole(text);
+}
+
+function isGreen(cellID){
+	if (document.getElementById(cellID).style.background == "green")
+		return true;
+	else return false;
 }
 
 function printInConsole(text){
