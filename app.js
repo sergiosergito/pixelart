@@ -7,14 +7,10 @@ function changeColor(cellID){
 	}
 }
 
-function download(filename) {
+function download() {
   var element = document.createElement('a');
-  var text = 	"void setup() {" +
-  				"}" +
-  				"void loop() {" +
-  				" }";
-  
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  var filename ="leds.ino"
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(generateInoFile()));
   element.setAttribute('download', filename);
   element.style.display = 'none';
   document.body.appendChild(element);
@@ -36,5 +32,15 @@ function generateGrid(){
 	}
 	return text;
 }
+
+function generateInoFile(){
+	var text = "void setup() {\n" +
+  				"}\n" +
+  				"void loop() {\n" +
+  				"this is the grid" +
+  				"}";
+  	return text;
+}
+
 
 document.getElementById("generateGrid").innerHTML = generateGrid();
