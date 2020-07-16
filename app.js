@@ -7,8 +7,23 @@ function changeColor(cellID){
 	}
 }
 
+function download(filename) {
+  var element = document.createElement('a');
+  var text = 	"void setup() {" +
+  				"}" +
+  				"void loop() {" +
+  				" }";
+  
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+  element.setAttribute('download', filename);
+  element.style.display = 'none';
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+}
+
 function generateGrid(){
-	var sizeOfCanvas = 4;
+	var sizeOfCanvas = 3;
 	var cellID=1;
 	var text = "";
 	for (var row = 0; row < sizeOfCanvas; row++) {

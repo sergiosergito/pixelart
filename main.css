@@ -1,6 +1,6 @@
 :root {
   --CELL_SIZE: 50px;
-  --CANVAS_SIZE: 200px;
+  --CANVAS_SIZE: 150px;
 }
 
 .pixel {

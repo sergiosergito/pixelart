@@ -9,6 +9,14 @@
     <div class = "canvas">
       <div id="generateGrid"></div>
     </div>
+    <div>
+      <span>Download .ino file: </span>
+      <body>
+      <form onsubmit="download(this['name'].value)">
+        <input type="text" name="name" value="test.ino">
+        <input type="submit" value="Download">
+      </form>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
