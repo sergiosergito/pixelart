@@ -25,7 +25,7 @@ function generateGrid(){
 	for (var row = 0; row < sizeOfCanvas; row++) {
 		text+="<div class='row'>";
 		for (var cell = 0; cell < sizeOfCanvas; cell++){
-			text += "<div class='pixel' id= " + cellID + " onclick= 'changeColor(" + cellID +" )' ></div>";
+			text += "<div class='pixel' id= " + cellID + " onclick= 'changeColor(" + cellID +")' ></div>";
 			cellID++;
 		}
 		text+="</div>";
@@ -42,5 +42,5 @@ function generateInoFile(){
   	return text;
 }
 
-
+document.getElementById("download-button").addEventListener("click", download);
 document.getElementById("generateGrid").innerHTML = generateGrid();
