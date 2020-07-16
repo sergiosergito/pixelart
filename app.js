@@ -1,5 +1,10 @@
 function changeColor(cellID){
-	document.getElementById(cellID).style.background = "green";
+	if (document.getElementById(cellID).style.background != "green") {
+		document.getElementById(cellID).style.background = "green";	
+	}
+	else{
+		document.getElementById(cellID).style.background = "none";
+	}
 }
 
 function generateGrid(){
