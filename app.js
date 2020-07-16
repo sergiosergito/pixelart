@@ -34,13 +34,36 @@ function generateGrid(){
 }
 
 function generateInoFile(){
-	var text = "void setup() {\n" +
-  				"}\n" +
-  				"void loop() {\n" +
-  				"this is the grid" +
-  				"}";
-  	return text;
+	var text =	"//" +
+			generateInoGrid() + "\n" +
+			"void setup() {\n" +
+				"}\n" +
+				"void loop() {\n" +
+				"this is the grid" +
+				"}";
+	return text;
 }
 
-document.getElementById("download-button").addEventListener("click", download);
+function generateInoGrid(){
+	var sizeOfCanvas = 3;
+	var cellID=1;
+	var text = "{";
+	for (var row = 0; row < sizeOfCanvas*sizeOfCanvas; row++) {
+		if (document.getElementById(cellID).style.background == "green") {
+			text +="1";
+		}
+		else{
+			text +="0"
+		}
+		cellID++;
+	}
+	text +="}";
+	printInConsole(text);
+}
+
+function printInConsole(text){
+	console.log(text);
+}
+
+document.getElementById("download-button").addEventListener("click", generateInoGrid);
 document.getElementById("generateGrid").innerHTML = generateGrid();
