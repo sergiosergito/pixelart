@@ -1,3 +1,6 @@
+function changeColor(cellID){
+	document.getElementById(cellID).style.background = "green";
+}
 
 function generateGrid(){
 	var sizeOfCanvas = 4;
@@ -6,7 +9,7 @@ function generateGrid(){
 	for (var row = 0; row < sizeOfCanvas; row++) {
 		text+="<div class='row'>";
 		for (var cell = 0; cell < sizeOfCanvas; cell++){
-			text += "<div class='pixel' id= " + cellID + " ></div>";
+			text += "<div class='pixel' id= " + cellID + " onclick= 'changeColor(" + cellID +" )' ></div>";
 			cellID++;
 		}
 		text+="</div>";
